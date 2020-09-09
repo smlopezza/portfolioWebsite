@@ -1,0 +1,54 @@
+/* Styles related with Log-in */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-size: 1rem !important;
+    color: black !important;
+}
+
+header.masthead {
+  position: relative;
+  background-color: #343a40;
+  background: url("../images/bg-masthead.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.sticky-offset {
+    top: 10%;
+}
+
+.link2 {
+  color: #793C78 !important;
+  text-decoration: none;
+  background-color: transparent;
+  box-sizing: border-box;
+  text-align: -webkit-match-parent;
+  list-style: none;
+  font-size: 1rem !important;
+  font-family: Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;
+
+}
+
+
+
+
+
+
+.text-primary {
+  color: #793C78 !important;
+}
+
+.btn-primary {
+  background-color: #793C78 !important;
+  color: white !important;
+  border: 0px;
+}
+
+.bg-gradient-primary{
+  background-color: white !important;
+  background-image: linear-gradient(180deg, white 10%, white 100%) !important;
+  background-size: cover !important;
+}

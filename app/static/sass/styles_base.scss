@@ -1,0 +1,40 @@
+@import "variables";
+
+html, body {
+    font-size: 1rem !important;
+    color: black !important;
+}
+
+.text-primary {
+  color: $primary-color !important;
+}
+
+.btn-primary {
+  background-color: $primary-color !important;
+  color: white !important;
+  border: 0px;
+}
+
+header.masthead {
+  position: relative;
+  background-color: #343a40;
+  background: url("../images/bg-masthead.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.link2 {
+  color: $primary-color !important;
+  text-decoration: none;
+  background-color: transparent;
+  box-sizing: border-box;
+  text-align: -webkit-match-parent;
+  list-style: none;
+  font-size: 1rem !important;
+  font-family: Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.nav-link:hover{
+  color: $primary-color !important;
+}

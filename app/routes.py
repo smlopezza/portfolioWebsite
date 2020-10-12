@@ -16,6 +16,10 @@ def index():
 def portfolio():
     return render_template("portfolio.html")
 
+@app.route('/playground')
+def playground():
+    return render_template("playground.html")
+
 @app.route('/aboutMe')
 def aboutMe():
     return render_template("aboutMe.html")

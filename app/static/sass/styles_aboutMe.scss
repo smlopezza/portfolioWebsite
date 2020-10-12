@@ -1,0 +1,6 @@
+@import "variables";
+
+.card-header, .jumbotron-fluid {
+  background-color: $primary-color;
+  color: $font_secondary-color;
+}

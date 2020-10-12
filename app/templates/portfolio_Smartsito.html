@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+<div class="container">
+  <div class="col-lg-12 mb-5">
+    <h1 class="mt-5 mb-5" style='text-align: center;'> SmartSito <small>(Feb-May 2020)</small> </h1>
+    <div style="float: right">
+      <a href="http://smartsito.pythonanywhere.com/" class="btn btn-primary" target="_blank">Demo</a>
+      <a href="https://medium.com/@slopezza/getting-to-the-finale-9de32dd58804" class="btn btn-primary" target="_blank">Blog</a>
+      <a href="https://discover-ai-with-microsoft.agorize.com/en/challenges/smarter-and-sustainable-economies/pages/finals?lang=en" class="btn btn-primary" target="_blank">Agorize Finals</a>
+      <a href="{{ url_for('portfolioFile', pdf_id='SmartSito Semi-finals Presentation') }}" class="btn btn-primary" target="_blank">Download</a>
+    </div>
+
+    <h2> Objective </h2>
+    <p class='mb-5'>
+      Our team participated in the <a href="https://discover-ai-with-microsoft.agorize.com/en/challenges/smarter-and-sustainable-economies?lang=en">2020 Microsoft Discover AI Challenge: Smarter and Sustainable Economies</a>.
+      We were one of the top 3 finalists in the Retail & E-commerce category.
+      The challenge included ideation and development of a business plan, marketing strategy and a prototype, as well as pitching our idea on how to leverage AI and Analytics to create smarter and sustainable economies.
+
+      <br> <br>
+      SmartSito’s idea is that in one simple step, consumers can use their smartphones to scan purchases receipts and keep track of the expiring date of the items they buy. They are then notified of the items that are about to expire and provided recipes and ideas on how to use the items. In partnership with retailers, a reward program would incent the use of the platform and sharing data, which would also help retailers to plan better inventories and reduce waste.
+
+      <br> <br>
+
+    </p>
+
+
+
+    <div class="col-lg-6 mb-5">
+      <h2> Tools </h2>
+      <ul>
+        <li> Flask (Python) </li>
+        <li> Pandas </li>
+        <li> Azure Cognitive Services </li>
+        <li> Azure Websites </li>
+      </ul>
+    </div>
+
+    <div class="col-lg-6 mb-5">
+      <h2>Achievements</h2>
+      <ul>
+        <li> We got to the finale of the competition: Top 3 in the Retail & E-commerce category (237 initial teams in 4 categories)  </li>
+        <li> Ideation and development of business plan, marketing strategy and prototype </li>
+        <li> We proposed a solution for smart food waste leveraging AI and Analytics to create smarter and sustainable economies </li>
+      </ul>
+    </div>
+
+
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}

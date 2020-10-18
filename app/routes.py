@@ -30,6 +30,10 @@ def aboutMe():
 
 
 # Portfolio routes
+@app.route('/portfolio_PhDThesis')
+def portfolio_PhDThesis():
+    return render_template("portfolio_PhDThesis.html")
+
 @app.route('/portfolio_Smartsito')
 def portfolio_Smartsito():
     return render_template("portfolio_Smartsito.html")

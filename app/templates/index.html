@@ -79,13 +79,27 @@
           <img class="card-img-top" src="{{ url_for('static', filename='images/card1.jpg') }}" alt="Woman in a supermarket" height="200">
           <div class="card-body">
             <h4 class="card-title">Ph.D. Thesis</h4>
-            <p class="card-text">I applied data analysis, mathematical modelling, machine learning techniques and programming with Python to solve a Canadian company problem.</p>
+            <p class="card-text"> My PhD research at Western University is part of a collaborative project with a Canadian Oil & Gas company. My responsabilities included applying data analysis, mathematical modelling, machine learning techniques and programming with Python to optimize process economy. </p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary disabled">In Progress</a>
+            <a href="{{ url_for('portfolio_PhDThesis') }}" class="btn btn-primary">Find Out More!</a>
           </div>
         </div>
       </div>
+
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="{{ url_for('static', filename='images/card3.jpg') }}" alt="Toronto view from the island" height="200">
+          <div class="card-body">
+            <h4 class="card-title"> Recruit WebApp</h4>
+            <p class="card-text">I was the Lead Developer of an API to help a local school bus company in London, ON. The WebApp helped to improve and keep accountable the recruitment and training processes of the organization.</p>
+          </div>
+          <div class="card-footer">
+            <a href="{{ url_for('portfolio_RecruitApp')}}" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+
       <div class="col-md-4 mb-5">
         <div class="card h-100">
           <img class="card-img-top" src="{{ url_for('static', filename='images/card4.jpg') }}" alt="Smartsito website screenshot" height="200">
@@ -98,18 +112,8 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4 mb-5">
-        <div class="card h-100">
-          <img class="card-img-top" src="{{ url_for('static', filename='images/card3.jpg') }}" alt="Toronto view from the island" height="200">
-          <div class="card-body">
-            <h4 class="card-title">WebApp</h4>
-            <p class="card-text">I was the lead developer for a local company webapp.</p>
-          </div>
-          <div class="card-footer">
-            <a href="{{ url_for('portfolio_RecruitApp')}}" class="btn btn-primary">Find Out More!</a>
-          </div>
-        </div>
-      </div>
+
+
     </div>
 
 

@@ -18,11 +18,15 @@
         <div class="card h-100">
           <img class="card-img-top" src="{{ url_for('static', filename='images/card5.jpg') }}" alt="Woman in a supermarket" height="200">
           <div class="card-body">
-            <h4 class="card-title">Analysis of my banking transactions</h4>
-            <p class="card-text">....</p>
+            <h4 class="card-title">Topic Modelling of Banking Transactions</h4>
+            <p class="card-text">
+              In this notebook I analyze bank statements from my everyday banking account and my two credit cards using Topic Modelling. The idea is to classiffy the transactions. I also take a look on how my transactions have been affected by COVID 19.
+              <br> <br>
+                <b>Tools: </b>
+            </p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
+            <a href="{{ url_for('static', filename='playground/playground_BankTransactions.html') }}" class="btn btn-primary">Find Out More!</a>
           </div>
         </div>
       </div>

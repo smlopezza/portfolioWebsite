@@ -12,7 +12,6 @@ app = Flask(__name__)
 
 app.config.from_object(Config)
 app.static_folder = 'static'
-app.template_folder = 'templates'
 
 
 bootstrap = Bootstrap(app)

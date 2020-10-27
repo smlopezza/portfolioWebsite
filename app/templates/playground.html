@@ -12,8 +12,9 @@
 
   <section class="showcase" style="padding: 50px;">
     <h1 class="mb-2" style='text-align: center;'> Playgroud </h1>
-    <h5 class="mb-5" style="text-align: center;"> During my free time I enjoy putting in practice my skills by playing with data.</h5>
+    <h5 class="mb-5" style="text-align: center;"> During my free time I enjoy upskilling and putting in practice my skills by playing with data and taking online courses.</h5>
     <div class="row">
+
       <div class="col-md-4 mb-5">
         <div class="card h-100">
           <img class="card-img-top" src="{{ url_for('static', filename='images/card5.jpg') }}" alt="Woman in a supermarket" height="200">
@@ -22,7 +23,7 @@
             <p class="card-text">
               In this notebook I analyze bank statements from my everyday banking account and my two credit cards using Topic Modelling. The idea is to classiffy the transactions. I also take a look on how my transactions have been affected by COVID 19.
               <br> <br>
-                <b>Tools: </b> Pandas, Sklearn (LDA), Seaborn, Plotly
+                <b>Tools: </b> Pandas, Scikit-Learn (LDA), Seaborn, Plotly
             </p>
           </div>
           <div class="card-footer">
@@ -31,7 +32,22 @@
         </div>
       </div>
 
-
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="{{ url_for('static', filename='images/card6.jpg') }}" alt="Woman in a supermarket" height="200">
+          <div class="card-body">
+            <h4 class="card-title">Customer Segmentation</h4>
+            <p class="card-text">
+              In this notebook I perform customer segmentation using a credit card dataset from Kaggle. K-Means is used for the clustering.
+              <br> <br>
+                <b>Tools: </b> Pandas, Scikit-Learn (KMeans), Seaborn
+            </p>
+          </div>
+          <div class="card-footer">
+            <a href="{{ url_for('static', filename='playground/playground_CustomerSegmentation.html') }}" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
 
     </div>
 

@@ -46,6 +46,10 @@ def portfolio_Upskilling():
 def portfolio_RecruitApp():
     return render_template("portfolio_RecruitApp.html")
 
+@app.route('/portfolio_Logeo')
+def portfolio_Logeo():
+    return render_template("portfolio_Logeo.html")
+
 
 @app.route('/portfolioFile/<pdf_id>', methods=['GET', 'POST'])
 def portfolioFile(pdf_id):

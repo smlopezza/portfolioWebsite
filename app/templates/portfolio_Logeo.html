@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+<div class="container">
+  <div class="col-lg-12 mb-5">
+    <h1 class="mt-5 mb-5" style='text-align: center;'> Logeo <small>(Nov – Dec 2020)</small> </h1>
+    <div style="float: right">
+      <a href="https://www.youtube.com/watch?v=Sot3nrTvoiE&t=2s" class="btn btn-primary" target="_blank"> Demo </a>
+      <a href="https://www.logeo.co/" class="btn btn-primary" target="_blank"> Live App</a>
+    </div>
+
+    <h2> Summary </h2>
+
+    <div class="row mb-5">
+
+      <div class="col-lg-6 col-sm-6">
+        <p> On November 2020, I took part of the Graphical Neural Networks Workshop from <a href="https://ai.science/">Aggregate Intellect</a>.
+          The workshop included product development and ML Ops modules. As part of the workshop, random teams were assigned.
+          I took part of Logeo's Team and I was responsible for the deployment of the REST API to AWS.
+          As part of the workshop, a small competition among the developed projects was run. We were selected as the winners!
+        </p>
+      </div>
+
+      <div class="col-lg-6 col-sm-12">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Sot3nrTvoiE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+    </div>
+
+      <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Sot3nrTvoiE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+
+    <h2> Objective </h2>
+    <p> To develop a webapp able to automatically transform 2D logos to 3D using Graphical Neural Networks (GNN)  </p>
+
+    <h2> Business Problem </h2>
+    <p >
+      3D desings can take hours to be develop but with the help of AI a 3D logo can be generated in minutes.
+      <ul>
+        <li> In 2019, $236 billion USD were spend in advertising </li>
+        <li> 3D ads outperform traditional static adds incrising sing-up conversion and click-through rates on websites </li>
+      </ul>
+
+    </p>
+
+    <h2> Business Opportunity </h2>
+    <p>
+      Use AI to automatically generate 3D logos, reducing desing time. We can apply <a href="https://zhan-xu.github.io/rig-net/">RigNet</a> to generate skeletons facilitationg 3D logos animations.
+      RigNet applies GNN and can be used as a tool.  </p>
+
+
+
+
+    <div class="col-lg-6 mb-5">
+      <h2> Tools </h2>
+      <ul>
+        <li> Flask (Python) </li>
+        <li> AWS EC2 instance</li>
+        <li> RigNet </li>
+
+      </ul>
+    </div>
+
+
+
+    <div class="col-lg-6 mb-5">
+      <h2>Achievements</h2>
+      <ul>
+        <li> Deployment of a REST API using AWS Services </li>
+        <li> Presented results to the public and jury using online tools </li>
+
+      </ul>
+    </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}

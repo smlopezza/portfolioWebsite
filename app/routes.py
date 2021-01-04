@@ -57,7 +57,7 @@ def portfolioFile(pdf_id):
     uploads = os.path.join( app.root_path, app.config['UPLOAD_FOLDER'])
     return send_from_directory(directory=uploads, filename=filename)
 
-# # Playground routes
-# @app.route('/Playground01')
-# def Playground01():
-#     return render_template("playground_BankTransactions.html")
+# Playground routes
+@app.route('/playground_Titanic')
+def playground_Titanic():
+    return render_template("playground_Titanic.html")

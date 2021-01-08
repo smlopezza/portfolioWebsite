@@ -12,18 +12,23 @@
 
   <section class="showcase" style="padding: 50px;">
     <h1 class="mb-5" style='text-align: center;'> Portfolio </h1>
-    <h5 class="mb-5" style="text-align: center;"> I have been working on some exciting projects, including consulting, challenges and my Ph.D. thesis</h5>
+    <h5 class="mb-5" style="text-align: center;"> I have been working on some exciting consulting projects as well as
+      competitions, personal projects and my Ph.D. thesis.</h5>
 
     <div class="row">
       <div class="col-md-4 mb-6" style="margin-bottom: 2%;">
         <div class="card h-100">
-          <img class="card-img-top" src="{{ url_for('static', filename='images/card1.jpg') }}" alt="Woman in a supermarket" height="200">
+          <div class="card-header">
+            Research
+          </div>
+          <img class="card-img-top" src="{{ url_for('static', filename='images/card1.jpg') }}" alt="Woman in a computer" >
           <div class="card-body">
             <h4 class="card-title">Ph.D. Thesis</h4>
             <p class="card-text"> My PhD research at Western University is part of a collaborative project with a major Canadian Oil & Gas company. The objective of the project was to apply mathematical modelling and ML techniques to better understand hydrocarbon/water mixtures. </p>
+            <p class="card-text" > <b>Tools: </b> Python, Machine Learning (Sklearn), Mathematical Modelling</p>
           </div>
           <div class="card-footer">
-            <a href="{{ url_for('portfolio_PhDThesis') }}" class="btn btn-primary">Find Out More!</a>
+            <a href="{{ url_for('portfolio_PhDThesis') }}" class="btn btn-primary" target="_blank">Find Out More!</a>
           </div>
         </div>
       </div>
@@ -31,44 +36,57 @@
 
       <div class="col-md-4 mb-6" style="margin-bottom: 2%;">
         <div class="card h-100">
-          <img class="card-img-top" src="{{ url_for('static', filename='images/card3.jpg') }}" alt="Toronto view from the island" height="200">
+          <div class="card-header">
+            Paid Consulting Project
+          </div>
+          <img class="card-img-top" src="{{ url_for('static', filename='images/card3.jpg') }}" alt="School bus">
           <div class="card-body">
             <h4 class="card-title"> Recruit WebApp</h4>
             <p class="card-text">I was the Lead Developer of an API to help a local school bus company in London, ON. The WebApp helped to improve and keep accountable the recruitment and training processes of the organization.</p>
+            <p class="card-text" > <b>Tools: </b> Flask, SQL, PythonAnywhere</p>
           </div>
           <div class="card-footer">
-            <a href="{{ url_for('portfolio_RecruitApp')}}" class="btn btn-primary">Find Out More!</a>
+            <a href="{{ url_for('portfolio_RecruitApp')}}" class="btn btn-primary" target="_blank">Find Out More!</a>
           </div>
         </div>
       </div>
 
       <div class="col-md-4 mb-6" style="margin-bottom: 2%;">
         <div class="card h-100">
-          <img class="card-img-top" src="{{ url_for('static', filename='images/card7.jpg') }}" alt="Smartsito website screenshot" height="200">
+          <div class="card-header">
+            Paid Consulting Project
+          </div>
+          <img class="card-img-top" src="{{ url_for('static', filename='images/card7.jpg') }}" alt="Small canadian town" >
           <div class="card-body">
             <h4 class="card-title">Drain Tracker</h4>
             <p class="card-text"> I am the Lead Developer for an asset management tool for a small municipality near London.
               We are developing a WebApp to help the superintendent of drains manage the repairs and builing of the drains infrastructure.
               This project will involve migration of 20 years of data from the old system.
-               </p>
+            </p>
+            <p class="card-text" > <b>Tools: </b> Flask, SQL, PythonAnywhere </p>
           </div>
           <div class="card-footer">
             <a href="{{ url_for('portfolio_Smartsito') }}" class="btn btn-primary disabled">In progress...</a>
           </div>
         </div>
       </div>
+    </div>
 
-
+    <div class="row">
       <div class="col-md-4 mb-6" style="margin-bottom: 2%;">
         <div class="card h-100">
-          <img class="card-img-top" src="{{ url_for('static', filename='images/card4.jpg') }}" alt="Smartsito website screenshot" height="200">
+          <div class="card-header">
+            Competition
+          </div>
+          <img class="card-img-top" src="{{ url_for('static', filename='images/card4.jpg') }}" alt="Smartsito website screenshot">
           <div class="card-body">
             <h4 class="card-title">Smartsito</h4>
             <p class="card-text"> Our team, “SmartSito” was one of the top 3 finalists in the Retail & E-commerce category for the 2020 Microsoft Discover AI Challenge: Smarter and Sustainable Economies.
                 Smartsito attempts to reduce food waste using computer vision and a reward system. </p>
+            <p class="card-text" > <b>Tools: </b> Azure Cloud Services, Azure Web Apps</p>
           </div>
           <div class="card-footer">
-            <a href="{{ url_for('portfolio_Smartsito') }}" class="btn btn-primary">Find Out More!</a>
+            <a href="{{ url_for('portfolio_Smartsito') }}" class="btn btn-primary" target="_blank">Find Out More!</a>
           </div>
         </div>
       </div>
@@ -76,13 +94,17 @@
 
       <div class="col-md-4 mb-6" style="margin-bottom: 2%;">
         <div class="card h-100">
-          <img class="card-img-top" src="{{ url_for('static', filename='images/card2.jpg') }}" alt="Toronto view from the island" height="200">
+          <div class="card-header">
+            Competition
+          </div>
+          <img class="card-img-top" src="{{ url_for('static', filename='images/card2.jpg') }}" alt="Robot">
           <div class="card-body">
             <h4 class="card-title">AI Upskilling Journey</h4>
             <p class="card-text">Our team "Team Lopez AI" was the winner for the 6th Sprint of Microsoft AI Upskilling Journey.</p>
+            <p class="card-text" > <b>Tools: </b> Azure Cloud Services, Cognitive Services (chatbot, image recognition)</p>
           </div>
           <div class="card-footer">
-            <a href="{{ url_for('portfolio_Upskilling') }}" class="btn btn-primary">Find Out More!</a>
+            <a href="{{ url_for('portfolio_Upskilling') }}" class="btn btn-primary" target="_blank">Find Out More!</a>
           </div>
         </div>
       </div>
@@ -90,22 +112,73 @@
 
       <div class="col-md-4 mb-6" style="margin-bottom: 2%;">
         <div class="card h-100">
-          <img class="card-img-top" src="{{ url_for('static', filename='images/card8.png') }}" alt="Toronto view from the island" height="200">
+          <div class="card-header">
+            Competition
+          </div>
+          <img class="card-img-top" src="{{ url_for('static', filename='images/card8.png') }}" alt="Logeo app screenshot">
           <div class="card-body">
             <h4 class="card-title">Logeo</h4>
             <p class="card-text">Our team "Logeo" developed a webapp that transform 2D logos to 3D using RigNet model.
               I was responsible for the deployment of the REST API.
+
+            </p>
+
+            <p class="card-text">
+                <b>Tools: </b> Flask, AWS, RigNet model
             </p>
           </div>
           <div class="card-footer">
-            <a href="{{ url_for('portfolio_Logeo') }}" class="btn btn-primary">Find Out More!</a>
+            <a href="{{ url_for('portfolio_Logeo') }}" class="btn btn-primary" target="_blank">Find Out More!</a>
           </div>
         </div>
       </div>
 
+    </div>
 
+    <div class="row">
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-header">
+            Personal Project
+          </div>
+          <img class="card-img-top" src="{{ url_for('static', filename='images/card5.jpg') }}" alt="Jar with coins">
+          <div class="card-body">
+            <h4 class="card-title">Topic Modelling of Banking Transactions</h4>
+            <p class="card-text">
+              In this notebook, I analyze bank statements from my everyday banking account and my two credit cards using Topic Modelling. The idea is to classiffy the transactions. I also take a look on how my transactions have been affected by COVID 19.
+            </p>
 
+            <p class="card-text">
+                <b>Tools: </b> Pandas, Scikit-Learn (LDA), Seaborn, Plotly
+            </p>
+          </div>
+          <div class="card-footer">
+            <a href="{{ url_for('static', filename='playground/playground_BankTransactions.html') }}" class="btn btn-primary" target="_blank">Find Out More!</a>
+          </div>
+        </div>
+      </div>
 
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-header">
+            Personal Project
+          </div>
+          <img class="card-img-top" src="{{ url_for('static', filename='images/card6.jpg') }}" alt="Wallet with credit cards" >
+          <div class="card-body">
+            <h4 class="card-title">Customer Segmentation</h4>
+            <p class="card-text">
+              In this notebook I perform customer segmentation using a credit card dataset from Kaggle. K-Means is used for the clustering.
+            </p>
+
+            <p class="card-text">
+              <b>Tools: </b> Pandas, Scikit-Learn (KMeans), Seaborn
+            </p>
+          </div>
+          <div class="card-footer">
+            <a href="{{ url_for('static', filename='playground/playground_CustomerSegmentation.html') }}" class="btn btn-primary" target="_blank">Find Out More!</a>
+          </div>
+        </div>
+      </div>
     </div>
 
 

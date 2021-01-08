@@ -14,41 +14,41 @@ from flask import send_file, send_from_directory, safe_join, abort
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template("index.html")
+    return render_template("index.html", activePage = "home")
 
 @app.route('/portfolio')
 def portfolio():
-    return render_template("portfolio.html")
+    return render_template("portfolio.html", activePage = "portfolio")
 
 @app.route('/playground')
 def playground():
-    return render_template("playground.html")
+    return render_template("playground.html", activePage = "portfolio")  # I eleminated the section "playground" but some HTML were already created
 
 @app.route('/aboutMe')
 def aboutMe():
-    return render_template("aboutMe.html")
+    return render_template("aboutMe.html", activePage = "aboutMe")
 
 
 # Portfolio routes
 @app.route('/portfolio_PhDThesis')
 def portfolio_PhDThesis():
-    return render_template("portfolio_PhDThesis.html")
+    return render_template("portfolio_PhDThesis.html", activePage = "portfolio")
 
 @app.route('/portfolio_Smartsito')
 def portfolio_Smartsito():
-    return render_template("portfolio_Smartsito.html")
+    return render_template("portfolio_Smartsito.html", activePage = "portfolio")
 
 @app.route('/portfolio_Upskilling')
 def portfolio_Upskilling():
-    return render_template("portfolio_Upskilling.html")
+    return render_template("portfolio_Upskilling.html", activePage = "portfolio")
 
 @app.route('/portfolio_RecruitApp')
 def portfolio_RecruitApp():
-    return render_template("portfolio_RecruitApp.html")
+    return render_template("portfolio_RecruitApp.html", activePage = "portfolio")
 
 @app.route('/portfolio_Logeo')
 def portfolio_Logeo():
-    return render_template("portfolio_Logeo.html")
+    return render_template("portfolio_Logeo.html", activePage = "portfolio")
 
 
 @app.route('/portfolioFile/<pdf_id>', methods=['GET', 'POST'])

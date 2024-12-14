@@ -5,10 +5,12 @@ from app import app
 from flask_bootstrap import Bootstrap
 
 # Redirect to "next" page
-from werkzeug.urls import url_parse
+# from werkzeug.urls import url_parse
+from werkzeug.utils import safe_join
 
 # files
-from flask import send_file, send_from_directory, safe_join, abort
+# from flask import send_file, send_from_directory, safe_join, abort
+from flask import send_file, send_from_directory, abort
 
 
 @app.route('/')

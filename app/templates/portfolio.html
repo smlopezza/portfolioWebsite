@@ -12,9 +12,24 @@
 
   <section class="showcase" style="padding: 50px;">
     <h1 class="mb-5" style='text-align: center;'> Portfolio </h1>
-    <h5 class="mb-5" style="text-align: center;"> I have been working on some exciting projects, including consulting, challenges and my Ph.D. thesis</h5>
+    <h5 class="mb-5" style="text-align: center;"> I have worked on some exciting projects, including consulting, challenges and my Ph.D. thesis</h5>
 
     <div class="row">
+
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="{{ url_for('static', filename='images/card9.jpg') }}" alt="Woman in a supermarket" height="200">
+          <div class="card-body">
+            <h4 class="card-title"> AI-Powered Financial Report Summarizer </h4>
+            <p class="card-text"> Financial reports are dense and time-consuming to analyze. This project uses Retrieval-Augmented Generation (RAG) with Gemini to automatically generate concise, context-aware summaries by combining document retrieval with multimodal reasoning. The output includes a structured summary table for quick insight.</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://www.kaggle.com/code/smlopezza/ai-powered-financial-report-summarizer" class="btn btn-primary" target="_blank">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+
+
       <div class="col-md-4 mb-6" style="margin-bottom: 2%;">
         <div class="card h-100">
           <img class="card-img-top" src="{{ url_for('static', filename='images/card1.jpg') }}" alt="Woman in a supermarket" height="200">
@@ -42,7 +57,7 @@
         </div>
       </div>
 
-      <div class="col-md-4 mb-6" style="margin-bottom: 2%;">
+      <!-- <div class="col-md-4 mb-6" style="margin-bottom: 2%;">
         <div class="card h-100">
           <img class="card-img-top" src="{{ url_for('static', filename='images/card7.jpg') }}" alt="Smartsito website screenshot" height="200">
           <div class="card-body">
@@ -56,7 +71,7 @@
             <a href="{{ url_for('portfolio_Smartsito') }}" class="btn btn-primary disabled">In progress...</a>
           </div>
         </div>
-      </div>
+      </div> -->
 
 
       <div class="col-md-4 mb-6" style="margin-bottom: 2%;">

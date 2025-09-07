@@ -64,3 +64,7 @@ def portfolioFile(pdf_id):
 @app.route('/playground_Titanic')
 def playground_Titanic():
     return render_template("playground_Titanic.html")
+
+@app.route('/portfolio_FinancialReports_AI')
+def portfolio_FinancialReports_AI():
+    return render_template("portfolio_FinancialReports_AI.html")

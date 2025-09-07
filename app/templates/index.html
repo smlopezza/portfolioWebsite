@@ -37,7 +37,7 @@
   <!-- Icons Grid -->
   <section class="features-icons bg-light text-center">
     <div class="container">
-      <h2 class="mb-5"> Areas of interests </h2>
+      <h2 class="mb-5"> Areas of Expertise </h2>
       <div class="row">
         <div class="col-lg-4">
           <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
@@ -75,15 +75,30 @@
 
 
   <section class="showcase" style="padding: 5%;">
-    <h2 class="mb-2" style='text-align: center;'> Current Projects </h2>
-    <h5 class="mb-5" style="text-align: center;"> I love keeping my skills updated, I have been working on some exciting projects. Find a full list on my <a href="{{ url_for('portfolio') }}"> portfolio </a>. </h5>
+    <h2 class="mb-2" style='text-align: center;'> Highlighted Projects </h2>
+    <h5 class="mb-5" style="text-align: center;"> Find a full list on my <a href="{{ url_for('portfolio') }}"> portfolio </a> and <a href="{{ url_for('playground') }}"> playground </a>  </h5>
     <div class="row">
+
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="{{ url_for('static', filename='images/card9.jpg') }}" alt="Woman in a supermarket" height="200">
+          <div class="card-body">
+            <h4 class="card-title"> AI-Powered Financial Report Summarizer </h4>
+            <p class="card-text"> Financial reports are dense and time-consuming to analyze. This project uses Retrieval-Augmented Generation (RAG) with Gemini to automatically generate concise, context-aware summaries by combining document retrieval with multimodal reasoning. The output includes a structured summary table for quick insight.</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://www.kaggle.com/code/smlopezza/ai-powered-financial-report-summarizer" class="btn btn-primary" target="_blank">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+
+
       <div class="col-md-4 mb-5">
         <div class="card h-100">
           <img class="card-img-top" src="{{ url_for('static', filename='images/card1.jpg') }}" alt="Woman in a supermarket" height="200">
           <div class="card-body">
             <h4 class="card-title">Ph.D. Thesis</h4>
-            <p class="card-text"> My PhD research at Western University is part of a collaborative project with a major Canadian Oil & Gas company. The objective of the project was to apply mathematical modelling and ML techniques to better understand hydrocarbon/water mixtures. </p>
+            <p class="card-text"> My PhD research at Western University was part of a collaborative project with a major Canadian Oil & Gas company. The objective of the project was to apply mathematical modelling and ML techniques to better understand hydrocarbon/water mixtures. </p>
           </div>
           <div class="card-footer">
             <a href="{{ url_for('portfolio_PhDThesis') }}" class="btn btn-primary">Find Out More!</a>
@@ -104,7 +119,7 @@
         </div>
       </div>
 
-      <div class="col-md-4 mb-5">
+      <!-- <div class="col-md-4 mb-5">
         <div class="card h-100">
           <img class="card-img-top" src="{{ url_for('static', filename='images/card4.jpg') }}" alt="Smartsito website screenshot" height="200">
           <div class="card-body">
@@ -116,7 +131,7 @@
             <a href="{{ url_for('portfolio_Smartsito') }}" class="btn btn-primary">Find Out More!</a>
           </div>
         </div>
-      </div>
+      </div> -->
 
 
     </div>

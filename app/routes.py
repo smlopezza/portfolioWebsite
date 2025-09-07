@@ -71,12 +71,22 @@ def portfolio_FinancialReports_AI():
 
 # Webhook route for automatic deployment in PythonAnywhere
 # From: https://medium.com/@aadibajpai/deploying-to-pythonanywhere-via-github-6f967956e664
+# @app.route('/update_server', methods=['POST'])
+# def webhook():
+#     if request.method == 'POST':
+#         repo = git.Repo('https://github.com/smlopezza/portfolioWebsite')
+#         origin = repo.remotes.origin
+#         origin.pull()
+#         return 'Updated PythonAnywhere successfully', 200
+#     else:
+#         return 'Wrong event type', 400
+
+# https://www.youtube.com/watch?v=AZMQVI6Ss64
 @app.route('/update_server', methods=['POST'])
-def webhook():
-    if request.method == 'POST':
-        repo = git.Repo('https://github.com/smlopezza/portfolioWebsite')
-        origin = repo.remotes.origin
-        origin.pull()
-        return 'Updated PythonAnywhere successfully', 200
-    else:
-        return 'Wrong event type', 400
+def update_server():
+    repo = git.Repo('./portfolioWebsite')
+    origin = repo.remotes.origin
+    repo.create_head('main',
+                     origin.refs.main).set_tracking_branch(origin.refs.main).checkout()
+    origin.pull()
+    return '', 200

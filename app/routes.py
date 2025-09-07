@@ -3,6 +3,7 @@ from flask import render_template, flash, redirect, url_for, request
 from app import app
 
 from flask_bootstrap import Bootstrap
+import git  # GitPython library
 
 # Redirect to "next" page
 # from werkzeug.urls import url_parse

@@ -68,3 +68,15 @@ def playground_Titanic():
 @app.route('/portfolio_FinancialReports_AI')
 def portfolio_FinancialReports_AI():
     return render_template("portfolio_FinancialReports_AI.html")
+
+# Webhook route for automatic deployment in PythonAnywhere
+# From: https://medium.com/@aadibajpai/deploying-to-pythonanywhere-via-github-6f967956e664
+@app.route('/update_server', methods=['POST'])
+def webhook():
+    if request.method == 'POST':
+        repo = git.Repo('https://github.com/smlopezza/portfolioWebsite')
+        origin = repo.remotes.origin
+        origin.pull()
+        return 'Updated PythonAnywhere successfully', 200
+    else:
+        return 'Wrong event type', 400

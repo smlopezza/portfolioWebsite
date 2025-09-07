@@ -86,7 +86,7 @@ def portfolio_FinancialReports_AI():
 def update_server():
     repo = git.Repo('./portfolioWebsite')
     origin = repo.remotes.origin
-    repo.create_head('main',
-                     origin.refs.main).set_tracking_branch(origin.refs.main).checkout()
+    repo.create_head('master',
+                     origin.refs.master).set_tracking_branch(origin.refs.master).checkout()
     origin.pull()
     return '', 200

@@ -53,6 +53,7 @@ def portfolio_RecruitApp():
 @app.route('/portfolio_Logeo')
 def portfolio_Logeo():
     return render_template("portfolio_Logeo.html")
+    
 
 
 @app.route('/portfolioFile/<pdf_id>', methods=['GET', 'POST'])
@@ -66,9 +67,7 @@ def portfolioFile(pdf_id):
 def playground_Titanic():
     return render_template("playground_Titanic.html")
 
-@app.route('/portfolio_FinancialReports_AI')
-def portfolio_FinancialReports_AI():
-    return render_template("portfolio_FinancialReports_AI.html")
+
 
 # Webhook route for automatic deployment in PythonAnywhere
 # From: https://medium.com/@aadibajpai/deploying-to-pythonanywhere-via-github-6f967956e664

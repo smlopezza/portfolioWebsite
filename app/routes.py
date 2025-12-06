@@ -56,8 +56,8 @@ def portfolio_Logeo():
 @app.route('/portfolioFile/<pdf_id>', methods=['GET', 'POST'])
 def portfolioFile(pdf_id):
     filename = f"{pdf_id}.pdf"
-    uploads = os.path.join( app.root_path, app.config['UPLOAD_FOLDER'])
-    return send_from_directory(directory=uploads, filename=filename)
+    uploads = os.path.join( app.root_path, app.config['UPLOAD_FOLDER'])    
+    return send_from_directory(directory=uploads, path=filename)
 
 # Playground routes
 @app.route('/playground_Titanic')

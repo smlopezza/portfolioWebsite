@@ -22,6 +22,34 @@
     </div>
 
     <h2> Speaking & Community Engagements </h2>
+
+    <br><br>  
+    <h3> Moments on Stage </h3>
+
+
+      <style>
+      .speaking-gallery-container { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .speaking-gallery { display:flex; gap:1rem; align-items:flex-start; padding:0.5rem 0; }
+      .speaking-item { flex: 0 0 auto; width: 340px; height: 220px; }
+      .speaking-img { width:100%; height:100%; object-fit:cover; display:block; border-radius:6px; }
+      .speaking-gallery::-webkit-scrollbar { height:8px; }
+      .speaking-gallery::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius:4px; }
+      @media (max-width: 768px) { .speaking-item { width: 260px; height: 180px; } }
+      </style>
+
+      <div class="speaking-gallery-container mb-5">
+        {% set speaking_images = ['2025-11-25-Alpfa.jpeg', '2025-11-12-WCT-Panel.jpeg', '2025-11-07-Women in AI - Canada - Hackathon.jpeg', '2025-09-27-GoogleDevFest_01.jpeg', '2025-09-27-GoogleDevFest_02.jpeg', '2025-09-27-GoogleDevFest_03.jpeg', '2025-06-ENEIQ_01.png', '2025-06-ENEIQ_02.jpeg', '2024-04-17-GRM_Townhall.jpeg'] %}
+        <div class="speaking-gallery">
+          {% for img in speaking_images %}
+          <div class="speaking-item">
+            <a href="{{ url_for('static', filename='images/Public_Speaking/' + img) }}" target="_blank" style="text-decoration:none;">
+              <img src="{{ url_for('static', filename='images/Public_Speaking/' + img) }}" class="speaking-img shadow-sm" alt="Public Speaking image">
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
     <br><br>
     <h3> 2025 </h3>
 
@@ -52,18 +80,7 @@
       </ul>
 
   
-      <h3> Moments on Stage </h3>
 
-      
-
-      <div class="row mb-5">
-        <div class="col-lg-6 col-sm-12 mb-4">
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/czhPq6WcCOs?si=dyCX-QpQTocpCZ9J" title="Hispanotech Mentorship Program 2024 - Expert Panel: Navigating the Canadian Job Market" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        <div class="col-lg-6 col-sm-12 mb-4">
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/4OPjqnCmlZU?si=ld118y_pLUAaOSOc" title="Hispanotech Mentorship Program 2023 - Expert Panel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-      </div>
 
 
    

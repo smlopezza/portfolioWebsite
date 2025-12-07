@@ -53,6 +53,10 @@ def portfolio_RecruitApp():
 @app.route('/portfolio_Logeo')
 def portfolio_Logeo():
     return render_template("portfolio_Logeo.html")
+
+@app.route('/portfolio_Speaking_Community')
+def portfolio_Speaking_Community():
+    return render_template("portfolio_Speaking_Community.html")
     
 
 

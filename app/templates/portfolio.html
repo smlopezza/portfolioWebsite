@@ -7,11 +7,68 @@
 
   <!-- Icons Grid -->
 
+  <section class="showcase" style="padding: 50px;">
+    <h1 class="mb-2" style='text-align: center;'> Agentic AI Experimentation </h1>
+    <h5 class="mb-5" style="text-align: center;"> Creating experimental prototypes that demonstrate how agentic AI can enhance decision-making and daily routines.</h5>
+    <div class="row">
+
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="{{ url_for('static', filename='images/cookflow.png') }}" alt="Cookflow AI Agent" height="200">
+          <div class="card-body">
+            <h4 class="card-title">Personal CookFlow AI Agent</h4>
+           <p class="card-text"> This project was developed as the capstone for the <a href="https://www.kaggle.com/learn-guide/5-day-agents" target="_blank">Kaggle & Google 5-Day AI Agents Intensive Course</a>, from the Kaggle & Google 5-Day AI Agents Intensive Course, which focused on building safe, scalable agentic AI solutions.
+              <br><br>CookFlow is an AI-powered kitchen companion that streamlines grocery planning and batch-cooking so you enjoy balanced, stress-free meals all week.
+            <br> <br>
+                <b>Tools: </b> Gemini API, Google ADK, Python, GCP Cloud Run
+            </p>
+          </div>
+          <div class="card-footer">
+            <a href="https://github.com/smlopezza/Personal_CookFlow_AI_Agent" class="btn btn-primary" target="_blank">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="{{ url_for('static', filename='images/AI_Agents.png') }}" alt="Woman in a supermarket" height="200">
+          <div class="card-body">
+            <h4 class="card-title">AI Multi-Agent: Customer Segmentation & Marketing Planner</h4>
+            <p class="card-text"> This project was created as part of the <a href="https://gdg.community.dev/events/details/google-gdg-london-presents-google-devfest-2025-london-building-safe-secure-and-scalable-solutions-with-ai-and-cloud/cohost-gdg-on-campus-western-university-london-canada">Google DevFest 2025 London</a>: Building Safe, Secure and Scalable Solutions with AI and Cloud event. 
+              I directed a 90 minutes interactive workshop: Exploring Agentic AI: Hands-On with Gemini in Kaggle
+            <br> <br>
+                <b>Tools: </b> Gemini API, Google ADK, Python
+            </p>
+          </div>
+          <div class="card-footer">
+            <a href="https://www.kaggle.com/code/smlopezza/customer-segmentation-marketing-planner" class="btn btn-primary" target="_blank">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="{{ url_for('static', filename='images/card9.jpg') }}" alt="Woman in a supermarket" height="200">
+          <div class="card-body">
+            <h4 class="card-title"> AI-Powered Financial Report Summarizer </h4>
+            <p class="card-text"> Financial reports are dense and time-consuming to analyze. This project uses Retrieval-Augmented Generation (RAG) with Gemini to automatically generate concise, context-aware summaries by combining document retrieval with multimodal reasoning. The output includes a structured summary table for quick insight.
+              <br> <br>
+                <b>Tools: </b> Gemini API, Python
+            </p>
+          </div>
+          <div class="card-footer">
+            <a href="https://www.kaggle.com/code/smlopezza/ai-powered-financial-report-summarizer" class="btn btn-primary" target="_blank">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+
+
+  </section>
 
 
 
   <section class="showcase" style="padding: 50px;">
-    <h1 class="mb-5" style='text-align: center;'> Portfolio </h1>
+    <h1 class="mb-5" style='text-align: center;'> Data Science & Consulting </h1>
     <h5 class="mb-5" style="text-align: center;"> I have worked on some exciting projects, including consulting, challenges and my Ph.D. thesis</h5>
 
     <div class="row">
@@ -50,7 +107,7 @@
         </div>
       </div>
 
-      <!-- <div class="col-md-4 mb-6" style="margin-bottom: 2%;">
+      <div class="col-md-4 mb-6" style="margin-bottom: 2%;">
         <div class="card h-100">
           <img class="card-img-top" src="{{ url_for('static', filename='images/card7.jpg') }}" alt="Smartsito website screenshot" height="200">
           <div class="card-body">
@@ -64,8 +121,21 @@
             <a href="{{ url_for('portfolio_Smartsito') }}" class="btn btn-primary disabled">In progress...</a>
           </div>
         </div>
-      </div> -->
+      </div>
 
+
+
+
+    </div>
+
+
+
+  </section>
+
+  <section class="showcase" style="padding: 50px;">
+    <h1 class="mb-2" style='text-align: center;'> Competitions & Playground </h1>
+    <h5 class="mb-5" style="text-align: center;"> During my free time I enjoy upskilling and putting in practice my skills by playing with data and taking online courses.</h5>
+    <div class="row">
 
       <div class="col-md-4 mb-6" style="margin-bottom: 2%;">
         <div class="card h-100">
@@ -119,15 +189,39 @@
         </div>
       </div>
 
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="{{ url_for('static', filename='images/card5.jpg') }}" alt="Woman in a supermarket" height="200">
+          <div class="card-body">
+            <h4 class="card-title">Topic Modelling of Banking Transactions</h4>
+            <p class="card-text">
+              In this notebook, I analyze bank statements from my everyday banking account and my two credit cards using Topic Modelling. The idea is to classiffy the transactions. I also take a look on how my transactions have been affected by COVID 19.
+              <br> <br>
+                <b>Tools: </b> Pandas, Scikit-Learn (LDA), Seaborn, Plotly
+            </p>
+          </div>
+          <div class="card-footer">
+            <a href="{{ url_for('static', filename='playground/playground_BankTransactions.html') }}" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
 
-
-
-    </div>
-
-
-    <div class="row" style="margin-top: 2%">
-
-
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="{{ url_for('static', filename='images/card6.jpg') }}" alt="Woman in a supermarket" height="200">
+          <div class="card-body">
+            <h4 class="card-title">Customer Segmentation</h4>
+            <p class="card-text">
+              In this notebook I perform customer segmentation using a credit card dataset from Kaggle. K-Means is used for the clustering.
+              <br> <br>
+                <b>Tools: </b> Pandas, Scikit-Learn (KMeans), Seaborn
+            </p>
+          </div>
+          <div class="card-footer">
+            <a href="{{ url_for('static', filename='playground/playground_CustomerSegmentation.html') }}" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
 
     </div>
 

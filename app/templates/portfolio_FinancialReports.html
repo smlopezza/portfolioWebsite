@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+<div class="container">
+  <div class="col-lg-12 mb-5">
+    <h1 class="mt-5 mb-5" style='text-align: center;'> AI‑Powered Financial Report Summarizer <small>(Apr 2025)</small> </h1>
+    <div style="float: right">
+      <a href="https://www.kaggle.com/code/smlopezza/ai-powered-financial-report-summarizer" class="btn btn-primary" target="_blank">Kaggle</a>
+    </div>
+
+
+    <h2> Summary </h2>
+    <div class="row mb-5">
+
+      <div class="col-lg-6 col-sm-6">
+        <p>
+
+          This project aims to develop a personalized AI-powered tool for summarizing financial reports. The tool is designed to enhance the efficiency of financial data analysis for users.
+          <br><br>
+          The use case are the financial reports for 2024Q4, 2025Q1 and 2025Q2 for the 6 big banks in Canada:
+
+          <ul>
+            <li>Royal Bank,</li>
+            <li>Toronto-Dominion Bank,</li>
+            <li>the Bank of Montreal, (Not available)</li>
+            <li>the Canadian Imperial Bank of Commerce, (Not available)</li>
+            <li>the Bank of Nova Scotia</li>
+            <li>National Bank of Canada</li>
+          </ul>
+        The desired format of the output is a table summarizing the financial numbers reported during the quarter. As I want to focus on the most recent financial reports, but the LLMs models may not have training data with this information, I am using Retrieval Augmented Generation (RAG). 
+        
+        <br><br> Built as capstone project for <a href="https://www.kaggle.com/learn-guide/5-day-genai" target="_blank"> 5-Day Gen AI Intensive Course with Google</a>.
+      </p>
+
+      </div>
+
+      <div class="col-lg-6 col-sm-12">
+        <img src="{{ url_for('static', filename='images/financial_report.jpg') }}" width="400" height="300"  alt="...">
+      </div>
+
+    </div>
+
+
+    <h2> Objective </h2>
+    <p class='mb-4'>  To create an AI-powered tool that provides personalized summaries of financial reports, making complex financial data more accessible and actionable for users. </p>
+
+    <h2> Business Problem:</h2>
+    <p>Financial reports are often lengthy and complex, making it difficult for users to quickly extract relevant information. Key challenges include:</p>
+
+    <ul>
+      <li>Time-consuming analysis of extensive financial documents</li>
+      <li>Difficulty in understanding complex financial terminology and data</li>
+      <li>Need for personalized insights based on individual user preferences</li>
+    </ul>
+
+    <h2>Business Opportunity:</h2>
+    <p>There is an opportunity to leverage AI to transform the way financial reports are analyzed and understood. The new tool can:</p>
+
+    <ul>
+      <li>Generate concise summaries of financial reports tailored to user preferences</li>
+      <li>Provide accurate and reliable insights using advanced AI capabilities</li>
+      <li>Integrate seamlessly with other financial tools and systems</li>
+    </ul>
+
+    <h2>GenAI Capabilities Used:</h2>
+    <ul>
+      <li>Document understanding: To comprehend and process the content of financial reports</li>
+      <li>Grounding: To ensure the accuracy and reliability of the information provided</li>
+      <li>Embeddings: To capture semantic meaning and provide relevant insights</li>
+      <li>Retrieval augmented generation (RAG): To fetch relevant information from external sources</li>
+      <li>Structured output/JSON mode/controlled generation: To generate structured outputs in table format.</li>
+    </ul> 
+
+    
+
+    <div class="col-lg-6 mb-5 mt-5">
+      <h2> Tools </h2>
+      <ul>
+        <li> Gemini API</li>
+        <li> Python</li> 
+        <li> Kaggle </li>
+      </ul>
+    </div>
+
+    <div class="col-lg-6 mb-5 mt-5">
+      <h2>Achievements</h2>
+      <ul>
+        <li>Developed a AI tool for summarizing financial reports </li>
+        <li>Ensured high accuracy and reliability of the summaries through grounding</li>
+        <li>Provided personalized insights based on user preferences using embeddings</li>
+        <li>Enhanced user experience by reducing the time and effort required for financial analysis</li>
+       </ul>
+    </div>
+
+
+    
+  </div>
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}

@@ -65,6 +65,10 @@ def portfolio_CookFlow_Agent():
 @app.route('/portfolio_DevFest2025')
 def portfolio_DevFest2025():
     return render_template("portfolio_DevFest2025.html")
+
+@app.route('/portfolio_FinancialReports')
+def portfolio_FinancialReports():
+    return render_template("portfolio_FinancialReports.html")
     
 
 

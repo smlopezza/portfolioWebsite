@@ -35,12 +35,12 @@
     <p class='mb-2'> CookFlow uses a coordinated team of specialized agents: 
 
       <ul>
-        <li> Root Agent: orchestrates the full planning and cooking flow. </li>
-        <li> User Preferences Agent: captures household size, dietary needs, and pantry staples. </li> 
-        <li> Recipe Finder Agent: sources batch‑friendly recipes that meet constraints. </li>
-        <li> Grocery Planner Agent: generates categorized, quantity‑aware shopping lists. </li>
-        <li> Batch Cooking Agent: sequences tasks for efficient, low‑stress cooking. </li>
-        <li> Meal Distribution Agent: maps meals into a weekly calendar with portioning guidance. </li>
+        <li> <b>Root Agent:</b> orchestrates the full planning and cooking flow. </li>
+        <li> <b>User Preferences Agent:</b> captures household size, dietary needs, and pantry staples. </li> 
+        <li> <b>Recipe Finder Agent:</b> sources batch‑friendly recipes that meet constraints. </li>
+        <li> <b>Grocery Planner Agent:</b> generates categorized, quantity‑aware shopping lists. </li>
+        <li> <b>Batch Cooking Agent:</b> sequences tasks for efficient, low‑stress cooking. </li>
+        <li> <b>Meal Distribution Agent:</b> maps meals into a weekly calendar with portioning guidance. </li>
       </ul>
 
       All agents share a unified session context to maintain consistency across the workflow. </p>
@@ -48,10 +48,10 @@
       <h2>Technical Implementation:</h2>
       
       <ul>
-        <li> Built in Python: modular agent architecture, clean JSON contracts, and extensible workflows make it easy to adapt.</li>
-        <li> Deployed on GCP Cloud Run: serverless scaling ensures agents spin up only when needed, keeping costs lean and performance sharp.</li>
-        <li> Orchestrated agents: Root, Preferences, Finder, Planner, Batch Cooking, and Distribution all run as independent services, coordinated seamlessly.</li>
-        <li> Shared session context: every agent reads from the same source of truth, so preferences, pantry, and provenance stay consistent end‑to‑end.</li>
+        <li> <b>Built in Python:</b> modular agent architecture, clean JSON contracts, and extensible workflows make it easy to adapt.</li>
+        <li> <b>Deployed on GCP Cloud Run:</b> serverless scaling ensures agents spin up only when needed, keeping costs lean and performance sharp.</li>
+        <li> <b>Orchestrated agents:</b> Root, Preferences, Finder, Planner, Batch Cooking, and Distribution all run as independent services, coordinated seamlessly.</li>
+        <li> <b>Shared session context:</b> every agent reads from the same source of truth, so preferences, pantry, and provenance stay consistent end‑to‑end.</li>
       </ul>
 
       <h2> Evaluation: </h2>

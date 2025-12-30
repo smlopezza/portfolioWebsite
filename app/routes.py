@@ -61,6 +61,10 @@ def portfolio_Speaking_Community():
 @app.route('/portfolio_CookFlow_Agent')
 def portfolio_CookFlow_Agent():
     return render_template("portfolio_CookFlow_Agent.html")
+
+@app.route('/portfolio_DevFest2025')
+def portfolio_DevFest2025():
+    return render_template("portfolio_DevFest2025.html")
     
 
 

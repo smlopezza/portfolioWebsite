@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+<div class="container">
+  <div class="col-lg-12 mb-5">
+    <h1 class="mt-5 mb-5" style='text-align: center;'> Personal CookFlow AI Agent <small>(Nov 2025)</small> </h1>
+    <div style="float: right">
+      <a href="https://cookflow-ai-agent-service-594161647696.us-central1.run.app/" class="btn btn-primary" target="_blank">Demo</a>
+      <a href="https://github.com/smlopezza/Personal_CookFlow_AI_Agent" class="btn btn-primary" target="_blank">Github</a>
+    </div>
+
+
+    <h2> Summary </h2>
+    <div class="row mb-5">
+
+      <div class="col-lg-6 col-sm-6">
+        <p>
+          CookFlow is a multi‑agent AI kitchen assistant that helps users plan groceries, batch‑cook meals in one day, and enjoy stress‑free eating all week. 
+          <br><br>Built during a <a href="https://www.kaggle.com/learn-guide/5-day-agents" target="_blank"> Kaggle & Google 5‑DayAI Agents Intensive Course</a>, it delivers an end‑to‑end flow from intent → recipes → shopping list → cooking steps → weekly meal distribution.
+      </div>
+
+      <div class="col-lg-6 col-sm-12">
+        <!-- <iframe width="400" height="300" class="embed-responsive-item" src="https://www.youtube.com/watch?v=HuU-sYjRX2U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <iframe width="400" height="300" src="https://www.youtube.com/embed/HuU-sYjRX2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+    </div>
+
+
+    <h2> Objective </h2>
+    <p class='mb-4'>  Create an AI agent system that reduces meal‑planning stress by guiding users through a structured, one‑day batch‑cooking ritual tailored to their household, preferences, and schedule. </p>
+
+    <h2>Solution:</h2>
+    <p class='mb-2'> CookFlow uses a coordinated team of specialized agents: 
+
+      <ul>
+        <li> Root Agent: orchestrates the full planning and cooking flow. </li>
+        <li> User Preferences Agent: captures household size, dietary needs, and pantry staples. </li> 
+        <li> Recipe Finder Agent: sources batch‑friendly recipes that meet constraints. </li>
+        <li> Grocery Planner Agent: generates categorized, quantity‑aware shopping lists. </li>
+        <li> Batch Cooking Agent: sequences tasks for efficient, low‑stress cooking. </li>
+        <li> Meal Distribution Agent: maps meals into a weekly calendar with portioning guidance. </li>
+      </ul>
+
+      All agents share a unified session context to maintain consistency across the workflow. </p>
+
+      <h2>Technical Implementation:</h2>
+      
+      <ul>
+        <li> Built in Python: modular agent architecture, clean JSON contracts, and extensible workflows make it easy to adapt.</li>
+        <li> Deployed on GCP Cloud Run: serverless scaling ensures agents spin up only when needed, keeping costs lean and performance sharp.</li>
+        <li> Orchestrated agents: Root, Preferences, Finder, Planner, Batch Cooking, and Distribution all run as independent services, coordinated seamlessly.</li>
+        <li> Shared session context: every agent reads from the same source of truth, so preferences, pantry, and provenance stay consistent end‑to‑end.</li>
+      </ul>
+
+      <h2> Evaluation: </h2>
+      <ul>
+        <li> 15 real user conversations + 4 survey responses. </li>
+        <li> Users highlighted clear grocery lists, organized cooking workflows, and recipe variety. </li>
+        <li> Identified improvements: faster response times, better recipe retrieval, stronger memory of servings, and mobile formatting fixes. </li>
+      </ul>
+
+
+    <div class="col-lg-6 mb-5 mt-5">
+      <h2> Tools </h2>
+      <ul>
+        <li> Gemini API</li>
+        <li> Google ADK</li>
+        <li> Python</li> 
+        <li> GCP Cloud Run</li>
+      </ul>
+    </div>
+
+    <div class="col-lg-6 mb-5 mt-5">
+      <h2>Achievements</h2>
+      <ul>
+        <li> Designed and deployed a full multi‑agent system on GCP. </li>
+        <li> Delivered a complete weekly meal‑planning and batch‑cooking flow. </li>
+        <li> Demonstrated resilience to unsafe inputs and multilingual interactions. </li>
+        <li> Collected user feedback to guide next iterations. </li>
+      </ul>
+    </div>
+
+
+    
+  </div>
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}

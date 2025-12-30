@@ -57,6 +57,10 @@ def portfolio_Logeo():
 @app.route('/portfolio_Speaking_Community')
 def portfolio_Speaking_Community():
     return render_template("portfolio_Speaking_Community.html")
+
+@app.route('/portfolio_CookFlow_Agent')
+def portfolio_CookFlow_Agent():
+    return render_template("portfolio_CookFlow_Agent.html")
     
 
 

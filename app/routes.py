@@ -58,9 +58,13 @@ def portfolio_Logeo():
 def portfolio_Speaking_Community():
     return render_template("portfolio_Speaking_Community.html")
 
-@app.route('/portfolio_CookFlow_Agent')
-def portfolio_CookFlow_Agent():
-    return render_template("portfolio_CookFlow_Agent.html")
+@app.route('/portfolio_CookFlow_Agent_v1')
+def portfolio_CookFlow_Agent_v1():
+    return render_template("portfolio_CookFlow_Agent_v1.html")
+
+@app.route('/portfolio_CookFlow_Agent_v2')
+def portfolio_CookFlow_Agent_v2():
+    return render_template("portfolio_CookFlow_Agent_v2.html")
 
 @app.route('/portfolio_DevFest2025')
 def portfolio_DevFest2025():

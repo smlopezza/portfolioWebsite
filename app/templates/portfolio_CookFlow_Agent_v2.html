@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+<div class="container">
+  <div class="col-lg-12 mb-5">
+    <h1 class="mt-5 mb-5" style='text-align: center;'> Personal CookFlow AI Agent V2.0 <small>(Jan-Mar 2026)</small> </h1>
+    <div style="float: right">
+      <a href="https://personal-cookflow-ai-agent-594161647696.us-central1.run.app/" class="btn btn-primary" target="_blank">Try CookFlow</a>
+      <a href="https://github.com/smlopezza/Personal_CookFlow_AI_Agent" class="btn btn-primary" target="_blank">Github</a>
+    </div>
+
+
+    <h2> Summary </h2>
+    <div class="row mb-5">
+
+      <div class="col-lg-6 col-sm-6">
+        <p>
+          CookFlow is a multi-agent AI kitchen assistant that helps households plan meals around what they already have, reduce food
+  waste, and eat well without the weekly stress of starting from scratch. Built as part of <a href="https://ai.science/products-services/llm-agents-bootcamp" target="_blank">Aggregate Intellect Bootcamp</a>, v2 was
+   shaped by 12 in-depth user interviews conducted across Canada.
+
+          <!-- <div class="col-lg-6 col-sm-12">
+            <img src="{{ url_for('static', filename='images/cookflow_agent_architecture.png') }}" width="400"   alt="...">
+          </div> -->
+      </div>
+
+      <!-- <div class="col-lg-6 col-sm-12">
+        <iframe width="400" height="300" src="https://www.youtube.com/embed/HuU-sYjRX2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div> -->
+
+    </div>
+
+
+    <h2> Objective </h2>
+    <p class='mb-4'>  <a href="{{ url_for('portfolio_CookFlow_Agent_v1') }}" target="_blank">Version 1</a> set out to reduce meal-planning stress through structured batch-cooking. Version 2 reframes the core problem: most
+  users don't start with a recipe, they start with what's already in their fridge. CookFlow v2 meets users where they are, with
+  ingredient-first planning, faster responses, and memory that persists across sessions. </p>
+
+    <h2>What Changed in v2:</h2>
+    <p class='mb-2'> Twelve interviews revealed patterns that reshaped the product:
+
+    <ul>
+      <li> <b>Ingredient-first search:</b> "What can I make with what I have?" is now the primary entry point, not recipe browsing </li>
+      <li> <b>Constraint hierarchy:</b> Hard constraints (allergies, medical conditions) are enforced strictly; preferences are treated as
+  optimizable, not blockers </li>
+      <li> <b>Faster recipe retrieval:</b> Reduced latency in the Recipe Finder agent; fallback suggestions when constraints conflict </li>
+      <li> <b>Persistent portion memory:</b> Household size and preferences are remembered across sessions </li>
+      <li> <b>Anti-waste planning:</b> Leftover-aware suggestions surface before produce spoils </li>
+      <li> <b>Cultural cuisine support:</b> Ingredient substitution guidance for multicultural and newcomer households </li>
+    </ul>
+
+    These changes led to a more intuitive, personalized, and waste-conscious meal planning experience. </p>
+
+    <h2>Solution Architecture:</h2>
+
+     Version 2 restructured the system from 6 agents to a leaner, more reliable design based on a formal agent vs. service classification:
+      <br><br>
+     <table class="table table-hover table-bordered align-middle">
+      <thead class="table-light">
+        <tr>
+          <th>Component</th>
+          <th>Type</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>Root Agent </td>
+          <td>Agent</td>
+          <td>Orchestration, clarification loop, routing, fallback decisions, final assembly</td>
+        </tr>
+
+        <tr>
+          <td> Recipe Finder  </td>
+          <td>Agent</td>
+          <td>Multi-step search iteration, query broadening, structured recipe extraction</td>
+        </tr>
+
+        <tr>
+          <td>Meal Prep Planner  </td>
+          <td>Service</td>
+          <td>Linear transformation: recipes + constraints → cooking schedule + meal distribution</td>
+        </tr>
+
+        <tr>
+          <td>Recipe Filter  </td>
+          <td>Utility</td>
+          <td>Deterministic hard-constraint enforcement on every Recipe Finder result </td>
+        </tr>
+
+        <tr>
+          <td> Process Recipes  </td>
+          <td>Utility</td>
+          <td>Interception step: allergen filtering + total_time_estimate extraction </td>
+        </tr>
+
+        <tr>
+          <td>Build Grocery List </td>
+          <td>Utility</td>
+          <td>Python ingredient consolidation and quantity scaling (no LLM arithmetic)</td>
+        </tr>
+
+        <tr>
+          <td>Recipe DB Fallback </td>
+          <td>Utility</td>
+          <td>Curated local recipe DB when live search returns empty </td>
+        </tr>
+      </tbody>
+    </table>
+      
+      
+
+      <h2> User Research: </h2>
+
+        12 in-depth interviews conducted across Ontario and Alberta, covering households from 1–5+ people: families with young
+  children, multicultural/newcomer households, individuals managing medical dietary conditions (hypothyroidism, celiac disease,
+  diabetes), and large families with teens.
+      <br>
+  Key findings that drove v2 design decisions:
+  <ul>
+    <li> 10/12 users plan ingredient-first, not recipe-first </li>
+    <li> 8/12 named food waste as a primary emotional pain </li>
+    <li> 12/12 cited time as their top constraint </li>
+    <li> 6/12 are multicultural households with unmet ingredient-sourcing needs </li>
+    <li> Condition-specific diets (hypothyroidism, Down syndrome + autism) are completely ignored by every existing tool </li>
+  </ul>
+
+
+
+    <div class="col-lg-6 mb-5 mt-5">
+      <h2> Tools </h2>
+      <ul>
+        <li> Gemini API</li>
+        <li> Google ADK</li>
+        <li> Python</li> 
+        <li> FastAPI</li>
+        <li> GCP Cloud Run</li>
+        <li> Firestore </li>
+      </ul>
+    </div>
+
+    <div class="col-lg-6 mb-5 mt-5">
+      <h2>Achievements</h2>
+      <ul>
+        <li> Redesigned architecture from 6 agents to 2 agents + stateless Python utilities, reducing LLM token usage by 40–60%. </li>
+        <li> Conducted 12 in-depth user interviews across Canada to validate and reshape the product. </li>
+        <li> Hardened allergen safety with deterministic Python enforcement on every request. </li>
+        <li> Improved average evaluation score from 1/5 (v1) to 3.67/5 across 8 structured test cases. </li>
+        <li> Built ingredient-first planning mode as the primary entry point, directly from user research. </li>
+        <li> Deployed a working agentic system accessible to real users on GCP Cloud Run. </li>
+      </ul>
+    </div>
+
+
+    
+  </div>
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}

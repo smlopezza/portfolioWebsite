@@ -36,11 +36,16 @@
       .speaking-img { width:100%; height:100%; object-fit:cover; display:block; border-radius:6px; }
       .speaking-gallery::-webkit-scrollbar { height:8px; }
       .speaking-gallery::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius:4px; }
-      @media (max-width: 768px) { .speaking-item { width: 260px; height: 180px; } }
+      .cards-gallery-container { overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 1rem; }
+      .cards-gallery { display:flex; gap:1rem; align-items:stretch; padding:0.5rem 0; }
+      .cards-item { flex: 0 0 320px; min-width: 320px; }
+      .cards-gallery::-webkit-scrollbar { height:8px; }
+      .cards-gallery::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius:4px; }
+      @media (max-width: 768px) { .speaking-item { width: 260px; height: 180px; } .cards-item { min-width: 260px; flex: 0 0 260px; } }
       </style>
 
       <div class="speaking-gallery-container mb-5">
-        {% set speaking_images = ['2025-11-12-WCT-Panel.jpeg', '2025-11-07-Women in AI - Canada - Hackathon.jpeg', '2025-09-27-GoogleDevFest_01.jpeg', '2025-11-25-Alpfa.jpeg', '2025-09-27-GoogleDevFest_02.jpeg', '2025-09-27-GoogleDevFest_03.jpeg', '2025-06-ENEIQ_01.png', '2025-06-ENEIQ_02.jpeg', '2024-04-17-GRM_Townhall.jpeg'] %}
+        {% set speaking_images = ['2026-02-28-Alianza Latina 01.jpeg','2026-02-28-Alianza Latina 02.jpeg','2026-02-28-Alianza Latina 03.jpeg','2026-02-13-MFE Panel.jpeg', '2026-01-30-SWOCTS.jpeg', '2025-11-12-WCT-Panel.jpeg', '2025-11-07-Women in AI - Canada - Hackathon.jpeg', '2025-09-27-GoogleDevFest_01.jpeg', '2025-11-25-Alpfa.jpeg', '2025-09-27-GoogleDevFest_02.jpeg', '2025-09-27-GoogleDevFest_03.jpeg', '2025-06-ENEIQ_01.png', '2025-06-ENEIQ_02.jpeg', '2024-04-17-GRM_Townhall.jpeg'] %}
         <div class="speaking-gallery">
           {% for img in speaking_images %}
           <div class="speaking-item">
@@ -147,60 +152,80 @@
         I make AI accessible by translating complex concepts into practical insights for diverse audiences. From hands‑on workshops at developer festivals to academic lectures, I help students, professionals, and industry leaders understand how AI is shaping their fields. My contributions to conferences and summits ensure that conversations around AI remain inclusive, actionable, and grounded in real‑world applications.
       </p>
 
-      <div class="row">
+      <div class="cards-gallery-container mb-5">
+        <div class="cards-gallery">
 
-      <div class="col-md-4 mb-5">
-        <div class="card h-100" >
-          <div class="card-body">
-            <h5 class="card-title">Exploring Agentic AI: Hands-on with Gemini in Kaggle</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Workshop Speaker</h6>
-            <p class="card-text">
-              Practical AI workshop at DevFest London 2025 on building agentic AI with Gemini APIs within a tech community conference.
-            </p>
-            <p class="card-text"></p>
-              <b>Audience:</b> 40+ Student & Early Professionals
-            </p>
-            <a href="https://www.linkedin.com/posts/gdg-at-london_devfestlondon-gdg-ai-activity-7374895937900548096-rOUs?utm_source=share&utm_medium=member_desktop&rcm=ACoAACdiHkwBNeFUtW7OC7dPRx4s14Fns5sutww" target="_blank" class="card-link">Event link</a>
-            <a href="https://www.linkedin.com/company/gdg-at-london/" target="_blank" class="card-link">GDG London</a>
-            <p class="card-text"><small class="text-muted"> Sep. 2025 - London, Canada</small></p>
+          <div class="cards-item mb-5">
+            <div class="card h-100" >
+              <div class="card-body">
+                <h5 class="card-title">From Zero to AI Hero: An Introduction to AI for Beginners</h5>
+                <h6 class="card-subtitle mb-2 text-muted"> Organizer</h6>
+                <p class="card-text">
+                  Two-day Women in AI Canada masterclass exploring the evolution of AI, human-centered adoption, and the rise of autonomous agents; bringing together 170+ learners, leaders, and builders across Canada.
+                </p>
+                <p class="card-text"></p>
+                  <b>Audience:</b> 170+ Attendees
+                </p>
+                <a href="https://www.linkedin.com/posts/women-in-ai-canada_womeninai-artificialintelligence-aiagents-activity-7449451409000775680-VhNZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAACdiHkwBNeFUtW7OC7dPRx4s14Fns5sutww" target="_blank" class="card-link">Event link</a>
+                <a href="https://www.linkedin.com/showcase/women-in-ai-canada/" target="_blank" class="card-link">GDG London</a>
+                <p class="card-text"><small class="text-muted"> Mar. 2026 - Virtual, Canada</small></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards-item mb-5">
+            <div class="card h-100" >
+              <div class="card-body">
+                <h5 class="card-title">Exploring Agentic AI: Hands-on with Gemini in Kaggle</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Workshop Speaker</h6>
+                <p class="card-text">
+                  Practical AI workshop at DevFest London 2025 on building agentic AI with Gemini APIs within a tech community conference.
+                </p>
+                <p class="card-text"></p>
+                  <b>Audience:</b> 40+ Student & Early Professionals
+                </p>
+                <a href="https://www.linkedin.com/posts/gdg-at-london_devfestlondon-gdg-ai-activity-7374895937900548096-rOUs?utm_source=share&utm_medium=member_desktop&rcm=ACoAACdiHkwBNeFUtW7OC7dPRx4s14Fns5sutww" target="_blank" class="card-link">Event link</a>
+                <a href="https://www.linkedin.com/company/gdg-at-london/" target="_blank" class="card-link">GDG London</a>
+                <p class="card-text"><small class="text-muted"> Sep. 2025 - London, Canada</small></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards-item mb-5">
+            <div class="card h-100" >
+              <div class="card-body">
+                <h5 class="card-title">Artificial Intelligence in Chemical Industry: Innovations and Challenges</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Speaker</h6>
+                <p class="card-text">
+                  How AI is transforming chemical engineering through advanced analytics, automation, and responsible innovation..
+                </p>
+                <p class="card-text"></p>
+                  <b>Audience:</b> 60+ Students
+                </p>
+                <a href="https://www.instagram.com/p/DJPVd58RxYz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="card-link">Event link</a>
+                <p class="card-text"><small class="text-muted"> Jun. 2025 - Manizales, Colombia</small></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards-item mb-5">
+            <div class="card h-100" >
+              <div class="card-body">
+                <h5 class="card-title">2025 Toronto Machine Learning Summit (TMLS)</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Committee Member</h6>
+                <p class="card-text">
+                  Supporting community-driven machine learning initiatives through speaker selection within Toronto’s ML ecosystem.
+                </p>
+                <p class="card-text"></p>
+                  <b>Audience:</b> 400+ Professional Attendees
+                </p>
+                <a href="https://www.torontomachinelearning.com/about-us/" target="_blank" class="card-link">Event link</a>
+                <a href="https://www.torontomachinelearning.com/" target="_blank" class="card-link">TMLS</a>
+                <p class="card-text"><small class="text-muted"> Feb. to May 2025 - Virtual, Canada</small></p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-md-4 mb-5">
-        <div class="card h-100" >
-          <div class="card-body">
-            <h5 class="card-title">Artificial Intelligence in Chemical Industry: Innovations and Challenges</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Speaker</h6>
-            <p class="card-text">
-              How AI is transforming chemical engineering through advanced analytics, automation, and responsible innovation..
-            </p>
-            <p class="card-text"></p>
-              <b>Audience:</b> 60+ Students
-            </p>
-            <a href="https://www.instagram.com/p/DJPVd58RxYz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="card-link">Event link</a>
-            <p class="card-text"><small class="text-muted"> Jun. 2025 - Manizales, Colombia</small></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-5">
-        <div class="card h-100" >
-          <div class="card-body">
-            <h5 class="card-title">2025 Toronto Machine Learning Summit (TMLS)</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Committee Member</h6>
-            <p class="card-text">
-              Supporting community-driven machine learning initiatives through speaker selection within Toronto’s ML ecosystem.
-            </p>
-            <p class="card-text"></p>
-              <b>Audience:</b> 400+ Professional Attendees
-            </p>
-            <a href="https://www.torontomachinelearning.com/about-us/" target="_blank" class="card-link">Event link</a>
-            <a href="https://www.torontomachinelearning.com/" target="_blank" class="card-link">TMLS</a>
-            <p class="card-text"><small class="text-muted"> Feb. to May 2025 - Virtual, Canada</small></p>
-          </div>
-        </div>
-      </div>
 
     </div>
 
@@ -219,62 +244,74 @@
         Community engagement is at the heart of my work. I build bridges between newcomers, students, and professionals by speaking at universities & colleges, and mentoring through programs like Hispanotech, Nortwest London Resource Centre & Rothman Business Analytics Club. These initiatives foster collaboration, expand networks, and empower individuals to navigate career transitions, particularly into the Canadian job market. My mentorship and panels consistently highlight the power of community in driving professional growth.
       </p>
 
-      <div class="row">
+      <div class="cards-gallery-container mb-5">
+        <div class="cards-gallery">
 
-        <div class="col-md-4 mb-5">
-          <div class="card h-100" >
-            <div class="card-body">
-              <h5 class="card-title">AI-gnite Fall 2025</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Judge </h6>
-              <p class="card-text">
-                Showcased 7 AI projects, bringing experts feedback and bridging emerging talent to industry impact.
-              </p>
-              <p class="card-text"></p>
-                <b>Audience:</b> 20+ Students, 7 Final Presentations
-              </p>
-              <a href="https://www.eventbrite.ca/e/ai-gnite-fall-2025-tickets-1964513988222" target="_blank" class="card-link">Event link</a>
-              <a href="https://www.fanshawec.ca/" target="_blank" class="card-link">Fanshawe College</a>
-              <p class="card-text"><small class="text-muted"> Dec. 2025 - London, Canada</small></p>
+          <div class="cards-item mb-5">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Building Our Future in AI</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Panelist</h6>
+                <p class="card-text">
+                  Highlighted Latinx leadership and community‑powered AI action with Alianza Latina, amplifying voices shaping equitable, responsible AI in Canada.
+                </p>
+                <p class="card-text"><b>Audience:</b> 100+ attendees</p>
+                <a href="https://www.linkedin.com/posts/alianza-latina_alianzalatina-latinosinai-responsibleai-activity-7426440778618564608-HGps?utm_source=share&utm_medium=member_desktop&rcm=ACoAACdiHkwBNeFUtW7OC7dPRx4s14Fns5sutww" target="_blank" class="card-link">Event link</a>
+                <a href="https://www.linkedin.com/company/alianza-latina/" target="_blank" class="card-link">Alianza Latina</a>
+                <p class="card-text"><small class="text-muted"> Feb. 2026 - Toronto, Canada</small></p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-md-4 mb-5">
-          <div class="card h-100" >
-            <div class="card-body">
-              <h5 class="card-title">Closing Ceremony of ALPFA Toronto’s 2025 Mentorship Program</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Panelist</h6>
-              <p class="card-text">
-                Celebrated mentorship and Latinx leadership at ALPFA Toronto’s 2025 closing ceremony, connecting mentees with inspiring leaders.
-              </p>
-              <p class="card-text"></p>
-                <b>Audience:</b> 20+ Newcommers to Canada
-              </p>
-              <a href="https://www.linkedin.com/posts/alpfa-toronto_latinx-alpfatoronto-mentorshipmatters-activity-7395209126131216384-DkZC?utm_source=share&utm_medium=member_desktop&rcm=ACoAACdiHkwBNeFUtW7OC7dPRx4s14Fns5sutww" target="_blank" class="card-link">Event link</a>
-              <a href="https://www.linkedin.com/company/alpfa-toronto/" target="_blank" class="card-link">ALPFA Toronto</a>
-              <p class="card-text"><small class="text-muted"> Nov. 2025 - London, Canada</small></p>
+          <div class="cards-item mb-5">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">AI-gnite Fall 2025</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Judge</h6>
+                <p class="card-text">
+                  Showcased 7 AI projects, bringing experts feedback and bridging emerging talent to industry impact.
+                </p>
+                <p class="card-text"><b>Audience:</b> 20+ Students, 7 Final Presentations</p>
+                <a href="https://www.eventbrite.ca/e/ai-gnite-fall-2025-tickets-1964513988222" target="_blank" class="card-link">Event link</a>
+                <a href="https://www.fanshawec.ca/" target="_blank" class="card-link">Fanshawe College</a>
+                <p class="card-text"><small class="text-muted"> Dec. 2025 - London, Canada</small></p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-md-4 mb-5">
-          <div class="card h-100" >
-            <div class="card-body">
-              <h5 class="card-title">2025 Ontario Career Fair: Tech & AI </h5>
-              <h6 class="card-subtitle mb-2 text-muted">Organizer</h6>
-              <p class="card-text">
-                Featured tech and AI career opportunities, connecting diverse talent with industry leaders to inspire growth and innovation.
-              </p>
-              <p class="card-text"></p>
-                <b>Audience:</b> 400+ Attendees, 19 Organizations
-              </p>
-              <a href="https://www.eventbrite.ca/e/2025-ontario-career-fair-tech-ai-tickets-1381125937859?aff=ebdsoporgprofile" target="_blank" class="card-link">Event link</a>
-              <a href="https://www.linkedin.com/showcase/women-in-ai-canada/" target="_blank" class="card-link">Women in AI Canada</a>
-              <p class="card-text"><small class="text-muted"> Jul. 2025 - Toronto, Canada</small></p>
+          <div class="cards-item mb-5">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Closing Ceremony of ALPFA Toronto’s 2025 Mentorship Program</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Panelist</h6>
+                <p class="card-text">
+                  Celebrated mentorship and Latinx leadership at ALPFA Toronto’s 2025 closing ceremony, connecting mentees with inspiring leaders.
+                </p>
+                <p class="card-text"><b>Audience:</b> 20+ Newcommers to Canada</p>
+                <a href="https://www.linkedin.com/posts/alpfa-toronto_latinx-alpfatoronto-mentorshipmatters-activity-7395209126131216384-DkZC?utm_source=share&utm_medium=member_desktop&rcm=ACoAACdiHkwBNeFUtW7OC7dPRx4s14Fns5sutww" target="_blank" class="card-link">Event link</a>
+                <a href="https://www.linkedin.com/company/alpfa-toronto/" target="_blank" class="card-link">ALPFA Toronto</a>
+                <p class="card-text"><small class="text-muted"> Nov. 2025 - London, Canada</small></p>
+              </div>
             </div>
           </div>
-        </div>
 
+          <div class="cards-item mb-5">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">2025 Ontario Career Fair: Tech & AI</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Organizer</h6>
+                <p class="card-text">
+                  Featured tech and AI career opportunities, connecting diverse talent with industry leaders to inspire growth and innovation.
+                </p>
+                <p class="card-text"><b>Audience:</b> 400+ Attendees, 19 Organizations</p>
+                <a href="https://www.eventbrite.ca/e/2025-ontario-career-fair-tech-ai-tickets-1381125937859?aff=ebdsoporgprofile" target="_blank" class="card-link">Event link</a>
+                <a href="https://www.linkedin.com/showcase/women-in-ai-canada/" target="_blank" class="card-link">Women in AI Canada</a>
+                <p class="card-text"><small class="text-muted"> Jul. 2025 - Toronto, Canada</small></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
       <div class="row" style="padding: 1% 5%;">  
@@ -282,6 +319,8 @@
          <ul class='mb-5'>
             <!-- <li> <b> Panelist: </b> Closing Ceremony of ALPFA Toronto’s 2025 Mentorship Program - <a href="https://www.linkedin.com/posts/alpfa-toronto_latinx-alpfatoronto-mentorshipmatters-activity-7395209126131216384-DkZC?utm_source=share&utm_medium=member_desktop&rcm=ACoAACdiHkwBNeFUtW7OC7dPRx4s14Fns5sutww" target="_blank">ALPFA Toronto </a> - (Toronto, Canada - November 2025)  </li> -->
             <!-- <li> <b> Organizer:</b> <a href="https://www.eventbrite.ca/e/2025-ontario-career-fair-tech-ai-tickets-1381125937859?aff=ebdsoporgprofile" target="_blank"> 2025 Ontario Career Fair: Tech & AI </a> - Women in AI Canada - (Toronto, Canada - August 2025) </li> -->
+             <li> <b> Panelist: </b> <a href="https://www.linkedin.com/posts/moniquehaan_hosted-the-women-in-finance-panel-for-our-activity-7428162027837169664--ulE?utm_source=share&utm_medium=member_desktop&rcm=ACoAACdiHkwBNeFUtW7OC7dPRx4s14Fns5sutww" target="_blank">Women in Finance Panel</a> - Master of Financial Economics, Western University - (Virtual - February 2026) </li>
+            <li> <b> Speaker: </b> <a href="https://www.linkedin.com/posts/swocts_swocts-careerday-activity-7421340800518873089-HMDo?utm_source=share&utm_medium=member_desktop&rcm=ACoAACdiHkwBNeFUtW7OC7dPRx4s14Fns5sutww" target="_blank">SWOCTS Career Day</a> - SWOCTS - (London, Ontario - January 2026) </li>
             <li> <b> Panelist: </b> <a href="https://www.linkedin.com/posts/jennyrichmondbravo_leadership-activity-7320100432649822208-Fnfh?utm_source=share&utm_medium=member_desktop&rcm=ACoAACdiHkwBNeFUtW7OC7dPRx4s14Fns5sutww" target="_blank"> Scholars to Leaders Panel Discussion </a> - Western University - (Virtual Canada, April 2025)</li>
             <li> <b> Panelist </b> University of Toronto - Industry Talks - (Virtual Canada, March 2025) </li>
 

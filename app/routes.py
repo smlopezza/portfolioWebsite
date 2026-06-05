@@ -66,6 +66,10 @@ def portfolio_CookFlow_Agent_v1():
 def portfolio_CookFlow_Agent_v2():
     return render_template("portfolio_CookFlow_Agent_v2.html")
 
+@app.route('/portfolio_SofIA')
+def portfolio_SofIA():
+    return render_template("portfolio_SofIA.html")
+
 @app.route('/portfolio_DevFest2025')
 def portfolio_DevFest2025():
     return render_template("portfolio_DevFest2025.html")

@@ -1,0 +1,183 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+<div class="container">
+  <div class="col-lg-12 mb-5">
+    <h1 class="mt-5 mb-5" style='text-align: center;'> SofIA - Your Ally in Canada <small>(May-Jun 2026)</small> </h1>
+    <div style="float: right">
+      <a href="https://sofia-qhgvxxwh5q-nn.a.run.app/" class="btn btn-primary" target="_blank">Try SofIA</a>
+      <a href="https://github.com/smlopezza/sofia-canada" class="btn btn-primary" target="_blank">Github</a>
+    </div>
+
+
+    <h2> Summary </h2>
+    <div class="row mb-5">
+
+      <div class="col-lg-6 col-sm-6">
+        <p>
+          SofIA is a bilingual AI companion that helps Latino newcomers to Canada navigate their professional job transition, from understanding why reaching out to
+  other professionals matters, to actually enjoying it. Operating natively through WhatsApp, SofIA meets users where they already are, with no app to
+  download. Built through the <a href="https://ai.science/products-services/llm-agents-bootcamp" target="_blank">Aggregate Intellect Agentic AI BuildCamp</a>, informed by 9+ user research interviews with newcomers across Canada.
+
+          <!-- <div class="col-lg-6 col-sm-12">
+            <img src="{{ url_for('static', filename='images/cookflow_agent_architecture.png') }}" width="400"   alt="...">
+          </div> -->
+      </div>
+
+      <div class="col-lg-6 col-sm-12">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/uUg52IXvs5w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <!-- <div class="col-lg-6 col-sm-12">
+        <iframe width="400" height="300" src="https://youtu.be/VSl_5AFgm1c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div> -->
+
+    </div>
+
+
+    <h2> Objective </h2>
+    <p class='mb-4'>  Latino newcomers often arrive in Canada with strong professional backgrounds but face a specific emotional barrier: fear and overwhelm around professional
+  conversations in an unfamiliar culture. The goal was not to build another job board or resource directory, but to address the emotional and practical gap
+  between knowing networking matters and actually doing it, in the user's own language, at their own pace. </p>
+
+    <h2>What SofIA does </h2>
+
+    <ul>
+      <li> Guides users through preparing for and reflecting on professional conversations ("coffee chats")</li>
+      <li> Tracks contacts and follow-ups so nothing falls through the cracks </li>
+      <li> Helps users set career goals with encouraging progress tracking from onboarding to job offer </li>
+      <li> Surfaces regional newcomer resources tailored to the user's city </li>
+      <li> Responds naturally in English or Spanish based on user preference </li>
+      <li> Provides a web dashboard for reviewing contacts, progress, and conversation history </li>
+    </ul>
+
+    <b>What SofIA explicitly does not do: </b>replace mentors or career coaches, answer immigration questions, or substitute for mental health support.</p>
+
+    <h2>Solution Architecture:</h2>
+
+    <table class="table table-hover table-bordered align-middle">
+    <thead class="table-light">
+      <tr>
+        <th>Component</th>
+        <th>Type</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr>
+        <td>Webhook Router</td>
+        <td>API</td>
+        <td>Receives incoming WhatsApp messages via Twilio, validates requests, routes to conversation handler</td>
+      </tr>
+
+      <tr>
+        <td>Claude Agent</td>
+        <td>Agent</td>
+        <td>Conversation orchestration, response generation, bilingual tone management, boundary enforcement</td>
+      </tr>
+
+      <tr>
+        <td>Session Manager</td>
+        <td>Service</td>
+        <td>User state persistence, onboarding flow control, conversation continuity across sessions</td>
+      </tr>
+
+      <tr>
+        <td>Contact Tracker</td>
+        <td>Service</td>
+        <td>Logs professional connections, records conversation outcomes, surfaces follow-up reminders</td>
+      </tr>
+
+      <tr>
+        <td>Goal Engine</td>
+        <td>Service</td>
+        <td>Career milestone tracking from onboarding through job offer, progress summarization</td>
+      </tr>
+
+      <tr>
+        <td>Web Dashboard</td>
+        <td>Frontend</td>
+        <td>Jinja2-rendered user profile, contact history, and learning records — accessible via browser</td>
+      </tr>
+
+      <tr>
+        <td>Langfuse Observer</td>
+        <td>Utility</td>
+        <td>LLM tracing, evaluation scoring, and quality monitoring across all production conversations</td>
+      </tr>
+
+      <tr>
+        <td>Firestore DB</td>
+        <td>Database</td>
+        <td>Persistent storage for user profiles, conversation history, contacts, and goal state</td>
+      </tr>
+
+    </tbody>
+  </table>
+ 
+
+      <h2> User Research: </h2>
+        9 in-depth interviews with Latino newcomers in Canada: 5 still navigating their job transition (Track A), 4 who had successfully transitioned to roles
+  in their field (Track B). Participants came from Colombia, Peru, Mexico, and the Dominican Republic, with backgrounds in healthcare, academia,
+  engineering, law, and technology.
+      <br><br>
+  <b>Key findings:</b>
+  <ul>
+    <li>All 9 participants arrived with the wrong mental model of professional outreach, the LATAM model (networking = who can get you the job?) vs. the
+    Canadian model (networking = visibility over time). Not one had been explicitly taught the difference. One participant executed 20 conversations in 30 days
+    after receiving a single clear explanation.</li>  
+    <li> 7 distinct forms of the "I don't want to bother them" barrier emerged across participants, from cultural inhibition and cold outreach fear, to social
+    anxiety developed in Canada, to a specific block around asking for help from warm contacts after the connection is already made.</li>
+    <li> 3 of 5 still-searching participants attended professional events, collected LinkedIn connections, and never sent a follow-up message, believing
+    attendance was the work. The relationship starts after the event, not at it.</li>
+    <li> Emotional sustainability was the unanimous #1 gap for participants inside an active search: "La parte de la carga emocional es la más importante — sin 
+    energía para seguir, el resto pierde importancia." — P3 
+    <li> All 4 participants who had successfully transitioned credited volunteering, informal mentorship, or sustained community involvement (not job boards), as
+    the primary path to landing their role.</li>
+
+  </ul>
+
+
+
+    <div class="col-lg-6 mb-5 mt-5">
+      <h2> Tools </h2>
+      <ul>
+        <li> Python</li>
+        <li> Claude (Anthropic)</li>
+        <li> FastAPI</li> 
+        <li> Twilio (WhatsApp)</li>
+        <li> GCP Cloud Run</li>
+        <li> Firestore </li>
+        <li> Langfuse</li>
+      </ul>
+    </div>
+
+    <div class="col-lg-6 mb-5 mt-5">
+      <h2>Achievements</h2>
+      <ul>
+         <li> Deployed production-grade WhatsApp agent on GCP Cloud Run with zero app install required for users </li>  
+         <li> Built bilingual conversational experience that switches naturally between English and Spanish </li>
+         <li> Designed and ran LLM-as-judge evaluation pipeline across 14 test cases, identifying 2 systematic response gaps </li>
+         <li> Conducted 9+ user interviews to validate core assumptions before writing a line of code </li>
+         <li> Implemented Langfuse observability for real-time LLM tracing and quality monitoring in production </li>
+         <li> Validated product with 2 real users actively using the tool </li>
+
+      </ul>
+    </div>
+
+
+    
+  </div>
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}

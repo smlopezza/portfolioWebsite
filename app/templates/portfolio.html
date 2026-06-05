@@ -14,7 +14,7 @@
               <div class="features-icons-icon d-flex">
                 <i class="fas fa-robot m-auto text-primary"></i>
               </div>
-              <h3>Agentic AI Experimentation</h3>
+              <h3>Agentic AI Products</h3>
             </div>
           </a>
         </div>
@@ -45,9 +45,27 @@
 
   
   <section id="agentic" class="showcase" style="padding: 50px;">
-    <h1 class="mb-2" style='text-align: center;'> Agentic AI Experimentation </h1>
-    <h5 class="mb-5" style="text-align: center;"> Creating experimental prototypes that demonstrate how agentic AI can enhance decision-making and daily routines.</h5>
+    <h1 class="mb-2" style='text-align: center;'> Agentic AI Products </h1>
+    <h5 class="mb-5" style="text-align: center;"> Designing and deploying agentic AI companions used by real people: across cooking, career development, and newcomer integration.</h5>
     <div class="row">
+
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="{{ url_for('static', filename='images/Sofia V1.png') }}" alt="SofIA Avatar" height="200">
+          <div class="card-body">
+            <h4 class="card-title"> SofIA - Your Ally in Canada</h4>
+            <p class="card-text">A bilingual AI companion for Latino newcomers navigating the Canadian job market. SofIA helps users understand why reaching out to other professionals matters, and actually enjoy doing it. 
+              <br><br>Built with real user research across 9+ newcomer interviews, it delivers personalized goal-setting, regional resources, and culturally-aware guidance in English and Spanish. 
+              Developed as the project for the <a href="https://ai.science/products-services/llm-agents-bootcamp" target="_blank">Aggregate Intellect Agentic AI Buildcamp</a>.
+              <br> <br>
+                <b>Tools: </b> Python, Claude (Anthropic), FastAPI, Twilio (WhatsApp), Firestore, GCP Cloud Run, Docker, Langfuse
+            </p>
+          </div>
+          <div class="card-footer">
+            <a href="{{ url_for('portfolio_SofIA')}}" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
 
       <div class="col-md-4 mb-5">
         <div class="card h-100">
@@ -71,40 +89,9 @@
         </div>
       </div>
 
-      <div class="col-md-4 mb-5">
-        <div class="card h-100">
-          <img class="card-img-top" src="{{ url_for('static', filename='images/AI_Agents.png') }}" alt="Woman in a supermarket" height="200">
-          <div class="card-body">
-            <h4 class="card-title">AI Multi-Agent: Customer Segmentation & Marketing Planner</h4>
-            <p class="card-text"> This project was created as part of the <a href="https://gdg.community.dev/events/details/google-gdg-london-presents-google-devfest-2025-london-building-safe-secure-and-scalable-solutions-with-ai-and-cloud/cohost-gdg-on-campus-western-university-london-canada">Google DevFest 2025 London</a>: Building Safe, Secure and Scalable Solutions with AI and Cloud event. 
-              <br><br> I directed a 90 minutes interactive workshop: <i>Agentic AI: Hands-On with Gemini in Kaggle</i>
-            <br> <br>
-                <b>Tools: </b> Gemini API, Google ADK, Python
-            </p>
-          </div>
-          <div class="card-footer">
-            <a href="{{ url_for('portfolio_DevFest2025') }}" class="btn btn-primary" target="_blank">Find Out More!</a>
-          </div>
-        </div>
-      </div>
+      
 
-      <div class="col-md-4 mb-5">
-        <div class="card h-100">
-          <img class="card-img-top" src="{{ url_for('static', filename='images/card9.jpg') }}" alt="Woman in a supermarket" height="200">
-          <div class="card-body">
-            <h4 class="card-title"> AI-Powered Financial Report Summarizer </h4>
-            <p class="card-text"> 
-              This project was developed as the capstone for the <a href="https://www.kaggle.com/learn-guide/5-day-genai" target="_blank">5-Day Gen AI Intensive Course with Google</a>.
-              <br><br>Financial reports are dense and time-consuming to analyze. This project uses Retrieval-Augmented Generation (RAG) with Gemini to automatically generate concise, context-aware summaries by combining document retrieval with multimodal reasoning. The output includes a structured summary table for quick insight.
-              <br> <br>
-                <b>Tools: </b> Gemini API, Python
-            </p>
-          </div>
-          <div class="card-footer">
-            <a href="{{ url_for('portfolio_FinancialReports') }}" class="btn btn-primary" target="_blank">Find Out More!</a>
-          </div>
-        </div>
-      </div>
+      
 
 
   </section>
@@ -180,6 +167,41 @@
     <h1 class="mb-2" style='text-align: center;'> Competitions & Playground </h1>
     <h5 class="mb-5" style="text-align: center;"> During my free time I enjoy upskilling and putting in practice my skills by playing with data and taking online courses.</h5>
     <div class="row">
+
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="{{ url_for('static', filename='images/AI_Agents.png') }}" alt="Woman in a supermarket" height="200">
+          <div class="card-body">
+            <h4 class="card-title">AI Multi-Agent: Customer Segmentation & Marketing Planner</h4>
+            <p class="card-text"> This project was created as part of the <a href="https://gdg.community.dev/events/details/google-gdg-london-presents-google-devfest-2025-london-building-safe-secure-and-scalable-solutions-with-ai-and-cloud/cohost-gdg-on-campus-western-university-london-canada">Google DevFest 2025 London</a>: Building Safe, Secure and Scalable Solutions with AI and Cloud event. 
+              <br><br> I directed a 90 minutes interactive workshop: <i>Agentic AI: Hands-On with Gemini in Kaggle</i>
+            <br> <br>
+                <b>Tools: </b> Gemini API, Google ADK, Python
+            </p>
+          </div>
+          <div class="card-footer">
+            <a href="{{ url_for('portfolio_DevFest2025') }}" class="btn btn-primary" target="_blank">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="{{ url_for('static', filename='images/card9.jpg') }}" alt="Woman in a supermarket" height="200">
+          <div class="card-body">
+            <h4 class="card-title"> AI-Powered Financial Report Summarizer </h4>
+            <p class="card-text"> 
+              This project was developed as the capstone for the <a href="https://www.kaggle.com/learn-guide/5-day-genai" target="_blank">5-Day Gen AI Intensive Course with Google</a>.
+              <br><br>Financial reports are dense and time-consuming to analyze. This project uses Retrieval-Augmented Generation (RAG) with Gemini to automatically generate concise, context-aware summaries by combining document retrieval with multimodal reasoning. The output includes a structured summary table for quick insight.
+              <br> <br>
+                <b>Tools: </b> Gemini API, Python
+            </p>
+          </div>
+          <div class="card-footer">
+            <a href="{{ url_for('portfolio_FinancialReports') }}" class="btn btn-primary" target="_blank">Find Out More!</a>
+          </div>
+        </div>
+      </div>
 
       <div class="col-md-4 mb-6" style="margin-bottom: 2%;">
         <div class="card h-100">

@@ -23,6 +23,8 @@ Each page is rendered with Flask and Jinja templates, while project assets such 
 - Production serving: Gunicorn
 - Deployment: Firebase Hosting with Cloud Run rewrites
 
+![Architecture Diagram](app/static/images/PortfolioWebsite_Architecture_Jul2026.png)
+
 ## Project structure
 
 - app/__init__.py: initializes the Flask app and registers extensions
